@@ -7,60 +7,29 @@
 
 import SwiftUI
 
-struct MeditationApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
-
 struct ContentView: View {
     var body: some View {
             VStack {
                 // Header
                 HStack {
                     Image("logo") // Replace with your logo
-                    Text("clearspace")
+                    Text("PORTAL")
                         .font(.headline)
-                    Spacer()
-                    Text("for what matters")
-                        .font(.subheadline)
+                        .bold()
                 }
                 .padding()
 
                 // Main Content
                 VStack {
-                    Text("be more present")
+                    Text("Disconnect to reconnect.")
                         .font(.largeTitle)
-                        .bold()
-                    Text("forever is composed of nows")
-                        .font(.title3)
-                    // Progress Tracker
-                    HStack {
-                        ForEach(["S", "M", "T", "W", "T", "F", "S"], id: \.self) { day in
-                            Rectangle()
-                                .frame(width: 20, height: 10)
-                                .foregroundColor(day == "T" ? .green : .gray) // Highlight current day
-                        }
-                    }
-                    Text("1 day streak 🔥")
+                    
                 }
                 .padding()
 
                 // Actionable Content
                 HStack {
-                    ForEach(0..<3, id: \.self) { index in
-                        Circle()
-                            .frame(width: 10, height: 10)
-                            .foregroundColor(index == 0 ? .green : .gray)
-                    }
-                    Spacer()
-                    Button(action: {
-                        // Implement your action here
-                    }) {
-                        Text("opens today")
-                    }
+                    
                 }
                 .padding()
 
@@ -74,6 +43,7 @@ struct ContentView: View {
                         Button(action: {
                             // Implement your action here
                         }) {
+                            Text("Add new app")
                             Image(systemName: "plus")
                                 .padding()
                                 .background(Color.blue)
